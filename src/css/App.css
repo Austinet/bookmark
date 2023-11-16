@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", Arial, sans-serif; }
+
+html {
+  font-size: 18px; }
+
+body {
+  overflow-x: hidden; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%; }
+
+.hero-container {
+  padding: 0 1.2rem;
+  margin: 7rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem; }
+  .hero-container__image img {
+    width: 100%; }
+  .hero-container__details {
+    max-width: 530px;
+    text-align: center; }
+    .hero-container__details h1 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #252b46;
+      line-height: 1.4; }
+    .hero-container__details p {
+      margin-bottom: 1.5rem;
+      line-height: 1.4; }
+    .hero-container__details--buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.95rem; }
+      .hero-container__details--buttons a {
+        padding: 0.7rem 0.55rem;
+        display: block;
+        border-radius: 6px;
+        font-weight: 500; }
+      .hero-container__details--buttons .blue {
+        background: #5368df;
+        color: #fff; }
+      .hero-container__details--buttons .grey {
+        color: #252b46;
+        background: rgba(145, 148, 161, 0.034);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
+@media screen and (min-width: 768px) {
+  .hero-container {
+    margin: 3rem auto 3.5rem; } }
+
+@media screen and (min-width: 1024px) {
+  .hero-container {
+    position: relative;
+    padding: 1.5rem;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 3rem;
+    justify-content: space-between; }
+    .hero-container__image {
+      min-width: 500px;
+      top: 20%; }
+    .hero-container__details {
+      text-align: left; }
+      .hero-container__details h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.8rem;
+        color: #252b46;
+        line-height: 1.4;
+        max-width: 80%; }
+      .hero-container__details p {
+        font-size: 1.1rem;
+        margin-bottom: 1.9rem;
+        line-height: 1.5; }
+      .hero-container__details--buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.5rem; }
+        .hero-container__details--buttons a {
+          padding: 0.9rem 1.5rem;
+          display: block;
+          border-radius: 6px;
+          font-weight: 500;
+          font-size: 1.05rem; }
+        .hero-container__details--buttons .blue {
+          background: #5368df;
+          color: #fff; }
+        .hero-container__details--buttons .grey {
+          color: #252b46;
+          background: rgba(145, 148, 161, 0.034);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); } }
+
+.left-50 {
+  left: -50rem; }
+
+.left-0 {
+  left: 0rem; }
+
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff; }
+  .nav-container__links {
+    width: 100%;
+    height: 100vh;
+    padding: 1.8rem 1.2rem;
+    position: fixed;
+    top: 0;
+    background: rgba(37, 43, 70, 0.966);
+    transition: all 0.4s ease-in-out; }
+    .nav-container__links--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem; }
+    .nav-container__links ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      .nav-container__links ul a {
+        border-top: 1px solid #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.065rem;
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: 1.25rem 0; }
+      .nav-container__links ul .btn {
+        border-top: 1px solid #fff;
+        padding-top: 1.8rem; }
+        .nav-container__links ul .btn a {
+          border: 2px solid #fff;
+          border-radius: 6px;
+          padding: 0.6rem 0;
+          font-weight: 600; }
+    .nav-container__links--footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+      width: 100%; }
+
+@media screen and (min-width: 768px) {
+  .menu-icon {
+    display: none; }
+  .nav-container {
+    position: relative;
+    padding: 3rem 1.5rem; }
+    .nav-container__links {
+      height: fit-content;
+      width: fit-content;
+      padding: 0;
+      position: static;
+      background: #fff; }
+      .nav-container__links--header, .nav-container__links--footer {
+        display: none; }
+      .nav-container__links ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem; }
+        .nav-container__links ul a {
+          border-top: none;
+          color: #252b46;
+          text-align: left;
+          padding: 0; }
+        .nav-container__links ul .btn {
+          border-top: none;
+          padding-top: 0; }
+          .nav-container__links ul .btn a {
+            border: none;
+            padding: 0.8rem 2.3rem;
+            font-weight: 500;
+            background: #fa5757;
+            color: #fff; } }
+
+footer {
+  background-color: #252b46; }
+
+.footer-container {
+  padding: 2.5rem 1.2rem;
+  max-width: 1300px;
+  margin: auto; }
+  .footer-container__quick-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem; }
+    .footer-container__quick-links ul a {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.065rem; }
+  .footer-container__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; }
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .footer-container__quick-links ul {
+      flex-direction: row;
+      gap: 3rem;
+      margin-bottom: 0; } }

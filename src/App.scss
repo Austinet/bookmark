@@ -1,0 +1,14 @@
+//Abstract files
+@import "./sass/abstract/functions", "./sass/abstract/mixins", "./sass/abstract/variables";
+//Base files
+@import "./sass/base/reset", "./sass/base/typography";
+//Component files
+@import  "./sass/components/hero", "./sass/components/header", "./sass/components/footer";
+//Layout files
+// @import "./sass/layouts/";
+//Pages files
+@import "./sass/pages/home";
+//Theme files
+@import "./sass/themes/theme";
+//Vendor files
+@import "./sass/vendors/bootstrap";
