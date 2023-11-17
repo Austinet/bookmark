@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import arrow from "../assets/icons/icon-arrow.svg";
+import { useState } from "react";
 
 const frequentlyAskedQuestionsList = [
   {
@@ -35,31 +37,49 @@ const frequentlyAskedQuestionsList = [
 ];
 
 const FrequentlyAskedQuestions = () => {
+  const [faqs, setFaqs] = useState(frequentlyAskedQuestionsList)
+
+
+  //Toggle questions and answers
+  const openAnswer = (id) => {
+     const newFaq = faqs.map(faq => {
+      if (faq.id === id) {
+        return {...faq, active: true}
+      } else {
+        return {...faq, active: false}
+      }
+     })
+     setFaqs(newFaq)
+  }
   return (
     <section>
-      <div>
-        <div>
+      <div className="faq-container">
+        <div className="faq-container__header">
           <h2>Frequently Asked Questions</h2>
           <p>
             Here are some of our FAQs. If you have any other questions you’d
             like answered please feel free to email us.
           </p>
         </div>
-        <div>
+        <div className="faq-container__questions">
           <ul>
-            {frequentlyAskedQuestionsList.map((faq) => {
+            {faqs.map((faq) => {
               const { id, question, answer, active } = faq;
 
               return (
                 <li key={id}>
-                  <h3>{question}</h3>
-                  <p>{answer}</p>
+                  <h3 onClick={() => openAnswer(id)}>
+                    {question} <img src={arrow} alt="drop down" className={active ? "translate" : ""}/>
+                  </h3>
+                  <p className={active ? "" : "close"}>{answer}</p>
                 </li>
               );
             })}
           </ul>
         </div>
-        <Link to={"/"}>More Info</Link>
+        <div className="faq-container__link">
+          <Link to={"/"}>More Info</Link>
+        </div>
       </div>
     </section>
   );

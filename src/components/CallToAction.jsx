@@ -1,6 +1,7 @@
 import chrome from "../assets/images/logo-chrome.svg";
 import firefox from "../assets/images/logo-firefox.svg";
 import opera from "../assets/images/logo-opera.svg";
+import bdDots from "../assets/images/bg-dots.svg";
 import { Link } from "react-router-dom";
 
 const callToActionList = [
@@ -30,24 +31,30 @@ const callToActionList = [
 const CallToAction = () => {
   return (
     <section>
-      <div>
-        <div>
+      <div className="cta-container">
+        <div className="cta-container__header">
           <h2>Download the extension</h2>
           <p>
             We’ve got more browsers in the pipeline. Please do let us know if
             you’ve got a favourite you’d like us to prioritize.
           </p>
         </div>
-        <div>
+        <div className="cta-container__cards">
           {callToActionList.map((cta) => {
             const { id, title, details, link, image } = cta;
 
             return (
-              <div key={id}>
-                <img src={image} alt="download" />
-                <h3>{title}</h3>
-                <p>{details}</p>
-                <Link to={"/"}>{link}</Link>
+              <div key={id} className="cta-container__cards--card">
+                <div className="card-header">
+                  <img src={image} alt="download" />
+                  <h3>{title}</h3>
+                  <p>{details}</p>
+                </div>
+
+                <div className="card-footer">
+                  <img src={bdDots} alt="dots" />
+                  <Link to={"/"}>{link}</Link>
+                </div>
               </div>
             );
           })}

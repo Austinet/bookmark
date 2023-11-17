@@ -1,0 +1,132 @@
+.close {
+  display: none;
+}
+
+.faq-container {
+  padding: 4rem 1.2rem;
+
+  &__header {
+    text-align: center;
+    margin: 0 auto 2rem;
+    max-width: 550px;
+
+    h2 {
+      color: $very-dark-blue;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: 0.073rem;
+      margin-bottom: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: $grayish-blue;
+    }
+  }
+
+  &__questions {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+
+    li {
+      margin: 1.2rem 0;
+      border-bottom: 2px solid $grayish-blue;
+
+      h3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+
+        img {
+          transform: rotate(0);
+          transition: all 0.3s;
+
+          &.translate {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      p {
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  &__link {
+    text-align: center;
+    padding: 2rem 0;
+
+    a {
+      padding: 1rem;
+      background-color: $soft-blue;
+      color: $white;
+      font-weight: 500;
+      border-radius: 6px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+    .faq-container {
+        padding: 6.5rem 1.2rem;
+      
+        &__header {
+          margin: 0 auto 3rem;
+      
+          h2 {
+            font-size: 2rem;
+          }
+      
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      
+        &__questions {
+          margin: 0 auto 3rem;
+      
+          li {
+            margin: 1.5rem 0;
+      
+            h3 {
+              font-size: 1.1rem;
+              // font-weight: 500;
+      
+              // img {
+              //   transform: rotate(0);
+              //   transition: all 0.3s;
+      
+              //   &.translate {
+              //     transform: rotate(180deg);
+              //   }
+              // }
+            }
+      
+            p {
+              // margin-bottom: 1rem;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        // &__link {
+        //   text-align: center;
+        //   padding: 2rem 0;
+      
+        //   a {
+        //     padding: 1rem;
+        //     background-color: $soft-blue;
+        //     color: $white;
+        //     font-weight: 500;
+        //     border-radius: 6px;
+        //   }
+        // }
+      }
+}
