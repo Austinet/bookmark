@@ -1,2 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Rubik:wght@400;500&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+h1,
+h2,
+h3,
+a {
+    color: $very-dark-blue;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+p {
+    color: $grayish-blue;
+    line-height: 1.5;
+}

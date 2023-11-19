@@ -43,18 +43,18 @@ const Features = () => {
 
   //Switch features tab
   const displayFeature = (id) => {
-    const newFeatures = featureItems.map(feature => {
+    const newFeatures = featureItems.map((feature) => {
       if (feature.id === id) {
-        return {...feature, active: true}
+        return { ...feature, active: true };
       } else {
-        return {...feature, active: false}
+        return { ...feature, active: false };
       }
-     })
-     setFeatureItems(newFeatures)
-  }
-  
+    });
+    setFeatureItems(newFeatures);
+  };
+
   return (
-    <section>
+    <section id="features">
       <div className="features-container">
         <div className="features-container__header">
           <h2>Features</h2>

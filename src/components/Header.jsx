@@ -31,14 +31,18 @@ const Header = () => {
     <header>
       <nav>
         <div className="nav-container">
+          {/* logo section */}
           <div className="nav-container__logo">
             <img src={logo} alt="Bookmark logo" />
           </div>
+
+          {/* nav links section  */}
           <div
             className={`nav-container__links ${
               toggleNav ? "left-0" : "left-50"
             }`}
           >
+            {/* mobile screen toggler */}
             <div className="nav-container__links--header">
               <img src={logoWhite} alt="Bookmark logo" />
               <img
@@ -58,12 +62,12 @@ const Header = () => {
               </li>
             </ul>
             <div className="nav-container__links--footer">
-                <Link>
-                  <img src={facebook} alt="Facebook logo" />
-                </Link>
-                <Link>
-                  <img src={twitter} alt="Twitter logo" />
-                </Link>
+              <Link>
+                <img src={facebook} alt="Facebook logo" />
+              </Link>
+              <Link>
+                <img src={twitter} alt="Twitter logo" />
+              </Link>
             </div>
           </div>
           <div className="menu-icon" onClick={() => setToggleNav(!toggleNav)}>

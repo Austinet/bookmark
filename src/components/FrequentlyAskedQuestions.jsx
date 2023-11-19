@@ -51,6 +51,7 @@ const FrequentlyAskedQuestions = () => {
      })
      setFaqs(newFaq)
   }
+  
   return (
     <section>
       <div className="faq-container">

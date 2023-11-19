@@ -1,131 +1,137 @@
-
+// Mobile screen toggle style rules
 .left-50 {
-    left: -50rem;
+  left: -50rem;
 }
 
 .left-0 {
-    left: 0rem;
+  left: 0rem;
 }
 
+// nav section
 .nav-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 1.8rem 1.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $white;
+
+  &__links {
     width: 100%;
+    height: 100vh;
+    padding: 1.8rem 1.2rem;
+    position: fixed;
     top: 0;
-    left: 0;
-    background: $white;
-    
+    background: $very-dark-blue-09;
+    transition: all 0.4s ease-in-out;
 
-    &__links  {
-        width: 100%;
-        height: 100vh;
-        padding: 1.8rem 1.2rem;
-        position: fixed;
-        top: 0;
-        background: $very-dark-blue-09;
-        transition: all 0.4s ease-in-out;
-
-        &--header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        & ul {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-
-            & a {
-                border-top: 1px solid $white;
-                font-size: 1rem;
-                font-weight: 500;
-                letter-spacing: 0.065rem;
-                color: $white;
-                text-align: center;
-                display: block;
-                padding: 1.25rem 0;
-            }
-
-            & .btn {
-                border-top: 1px solid $white;
-                padding-top: 1.8rem;
-
-                & a {
-                    border: 2px solid $white;
-                    border-radius: 6px;
-                    padding: 0.6rem 0;
-                }
-            }
-        }
-
-        &--footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            position: absolute;
-            bottom: 2rem;
-            left: 0;
-            width: 100%;
-        }
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.8rem;
     }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      a {
+        border-top: 1px solid $white;
+        font-size: 1rem;
+        letter-spacing: 0.065rem;
+        color: $white;
+        text-align: center;
+        display: block;
+        padding: 1.35rem 0;
+      }
+
+      & .btn {
+        border-top: 1px solid $white;
+        padding-top: 2rem;
+
+        a {
+          border: 2px solid $white;
+          border-radius: 6px;
+          padding: 0.8rem 0;
+        }
+      }
+    }
+
+    &--footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      position: absolute;
+      bottom: 0rem;
+      padding-bottom: 3rem;
+      left: 0;
+      width: 100%;
+    }
+  }
 }
 
-@media screen and (min-width: 768px){
-    .menu-icon {
-        display: none;
-    }
+@media screen and (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
 
-    .nav-container {
-        position: relative;
-        padding: 3rem 1.5rem;
-    
-        &__links  {
-            height: fit-content;
-            width: fit-content;
-            padding: 0;
-            position: static;
-            background: $white;
-    
-            &--header,
-            &--footer {
-                display: none;
-            }
-    
-            & ul {
-                // display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 2rem;
-                // width: 100%;
-    
-                & a {
-                    border-top: none;
-                    color: $very-dark-blue;
-                    text-align: left;
-                    padding: 0;
-                }
-    
-                & .btn {
-                    border-top: none;
-                    padding-top: 0;
-    
-                    & a {
-                        border: none;
-                        padding: 0.8rem 2.3rem;
-                        font-weight: 500;
-                        background: $soft-red;
-                        color: $white;
-                    }
-                }
-            }
+  .nav-container {
+    position: relative;
+    padding: 3rem 1.2rem;
+
+    &__links {
+      height: fit-content;
+      width: fit-content;
+      padding: 0;
+      position: static;
+      background: $white;
+
+      &--header,
+      &--footer {
+        display: none;
+      }
+
+      ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+
+        a {
+          border-top: none;
+          color: $very-dark-blue;
+          text-align: left;
+          padding: 0;
+
+          &:hover {
+            color: $soft-red;
+          }
         }
+
+        & .btn {
+          border-top: none;
+          padding-top: 0;
+          a {
+            border: none;
+            padding: 0.8rem 2.3rem;
+            background: $soft-red;
+            color: $white;
+            border: 2px solid $soft-red;
+
+            &:hover {
+              color: $soft-red;
+              background: $white;
+            }
+          }
+        }
+      }
     }
+  }
 }

@@ -1,7 +1,9 @@
+//General style rules
 .close {
   display: none;
 }
 
+//Frequently asked questions section
 .faq-container {
   padding: 4rem 1.2rem;
 
@@ -11,28 +13,19 @@
     max-width: 550px;
 
     h2 {
-      color: $very-dark-blue;
       font-size: 1.5rem;
-      font-weight: 500;
-      line-height: 1.4;
       letter-spacing: 0.073rem;
-      margin-bottom: 1.2rem;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.4;
-      color: $grayish-blue;
+      margin-bottom: 1.1rem;
     }
   }
 
   &__questions {
     max-width: 600px;
-    margin: 0 auto 2rem;
+    margin: 2rem auto;
 
     li {
       margin: 1.2rem 0;
-      border-bottom: 2px solid $grayish-blue;
+      border-bottom: 1px solid $grayish-blue;
 
       h3 {
         display: flex;
@@ -40,7 +33,6 @@
         justify-content: space-between;
         margin-bottom: 1rem;
         font-size: 0.9rem;
-        font-weight: 500;
 
         img {
           transform: rotate(0);
@@ -67,7 +59,6 @@
       padding: 1rem;
       background-color: $soft-blue;
       color: $white;
-      font-weight: 500;
       border-radius: 6px;
     }
   }
@@ -75,7 +66,7 @@
 
 @media screen and (min-width: 768px){
     .faq-container {
-        padding: 6.5rem 1.2rem;
+        padding: 5.5rem 1.2rem;
       
         &__header {
           margin: 0 auto 3rem;
@@ -97,6 +88,11 @@
       
             h3 {
               font-size: 1.1rem;
+              cursor: pointer;
+
+              &:hover {
+                color: $soft-red;
+              }
             }
       
             p {

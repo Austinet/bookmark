@@ -3,7 +3,7 @@ import error from "../assets/icons/icon-error.svg"
 
 const Subscribe = () => {
   return (
-    <section>
+    <section id="subscribe">
       <div className="subscribe-container">
         <div className="subscribe-container__header">
           <h3>35,000+ ALREADY JOINED</h3>
