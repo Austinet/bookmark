@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import arrow from "../assets/icons/icon-arrow.svg";
+import { BiSolidChevronDown } from "react-icons/bi";
 import { useState } from "react";
 
 const frequentlyAskedQuestionsList = [
@@ -37,21 +37,20 @@ const frequentlyAskedQuestionsList = [
 ];
 
 const FrequentlyAskedQuestions = () => {
-  const [faqs, setFaqs] = useState(frequentlyAskedQuestionsList)
-
+  const [faqs, setFaqs] = useState(frequentlyAskedQuestionsList);
 
   //Toggle questions and answers
   const openAnswer = (id) => {
-     const newFaq = faqs.map(faq => {
+    const newFaq = faqs.map((faq) => {
       if (faq.id === id) {
-        return {...faq, active: true}
+        return { ...faq, active: true };
       } else {
-        return {...faq, active: false}
+        return { ...faq, active: false };
       }
-     })
-     setFaqs(newFaq)
-  }
-  
+    });
+    setFaqs(newFaq);
+  };
+
   return (
     <section>
       <div className="faq-container">
@@ -70,7 +69,10 @@ const FrequentlyAskedQuestions = () => {
               return (
                 <li key={id}>
                   <h3 onClick={() => openAnswer(id)}>
-                    {question} <img src={arrow} alt="drop down" className={active ? "translate" : ""}/>
+                    {question}
+                    <BiSolidChevronDown
+                      className={`drop-down ${active ? "translate" : ""}`}
+                    />
                   </h3>
                   <p className={active ? "" : "close"}>{answer}</p>
                 </li>

@@ -1,7 +1,9 @@
+import { useState } from "react"
 import error from "../assets/icons/icon-error.svg"
 
 
 const Subscribe = () => {
+  const [validate, setValidate] = useState(false)
   return (
     <section id="subscribe">
       <div className="subscribe-container">
@@ -11,10 +13,12 @@ const Subscribe = () => {
         </div>
         <div>
           <form className="subscribe-container__form">
-          <div>
-            <input type="email" name="email" id="email"placeholder="Enter your email address" required/>
+          <div className="subscribe-container__form--input">
+            <input type="email" name="email" id="email"placeholder="Enter your email address" className={validate ? "validate": ""} required/>
+            <span>Whoops, make sure it&apos;s an email</span>
+            <img src={error} alt="invalid email address" />
           </div>
-          <button type="submit">Contact Us</button>
+          <button type="submit" onClick={() => setValidate(true)}>Contact Us</button>
           </form>
         </div>
       </div>

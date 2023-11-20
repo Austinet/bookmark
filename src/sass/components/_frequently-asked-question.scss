@@ -34,12 +34,15 @@
         margin-bottom: 1rem;
         font-size: 0.9rem;
 
-        img {
+        .drop-down {
+          font-size: 1.7rem;
+          color: $soft-blue;
           transform: rotate(0);
           transition: all 0.3s;
 
           &.translate {
             transform: rotate(180deg);
+            color: $soft-red !important;
           }
         }
       }
@@ -64,41 +67,41 @@
   }
 }
 
-@media screen and (min-width: 768px){
-    .faq-container {
-        padding: 5.5rem 1.2rem;
-      
-        &__header {
-          margin: 0 auto 3rem;
-      
-          h2 {
-            font-size: 2rem;
-          }
-      
-          p {
-            font-size: 1.1rem;
+@media screen and (min-width: 768px) {
+  .faq-container {
+    padding: 5.5rem 1.2rem;
+
+    &__header {
+      margin: 0 auto 3rem;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+
+    &__questions {
+      margin: 0 auto 3rem;
+
+      li {
+        margin: 1.5rem 0;
+
+        h3 {
+          font-size: 1.1rem;
+          cursor: pointer;
+
+          &:hover {
+            color: $soft-red;
           }
         }
-      
-        &__questions {
-          margin: 0 auto 3rem;
-      
-          li {
-            margin: 1.5rem 0;
-      
-            h3 {
-              font-size: 1.1rem;
-              cursor: pointer;
 
-              &:hover {
-                color: $soft-red;
-              }
-            }
-      
-            p {
-              font-size: 1rem;
-            }
-          }
+        p {
+          font-size: 1.05rem;
         }
       }
+    }
+  }
 }

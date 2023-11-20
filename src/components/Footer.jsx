@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
+import { FaTwitter } from "react-icons/fa";
+import { ImFacebook2 } from "react-icons/im";
 import logoWhite from "../assets/images/logo-bookmark-footer.svg";
-import facebook from "../assets/icons/icon-facebook.svg";
-import twitter from "../assets/icons/icon-twitter.svg";
 
 const footerLinks = [
   {
@@ -39,10 +39,10 @@ const Footer = () => {
         </div>
         <div className="footer-container__socials">
           <Link>
-            <img src={facebook} alt="Facebook logo" />
+            <ImFacebook2 />
           </Link>
           <Link>
-            <img src={twitter} alt="Twitter logo" />
+            <FaTwitter />
           </Link>
         </div>
       </div>

@@ -1,23 +1,24 @@
 .subscribe-container {
   padding: 3.5rem 1.2rem;
   background-color: $soft-blue;
-  color: $white;
 
   &__header {
     text-align: center;
     max-width: 500px;
     margin: 0 auto;
+
     h3 {
-        font-size: 1.08rem;
-        letter-spacing: 0.173rem;
-        font-weight: 400;
+      font-size: 1.08rem;
+      letter-spacing: 0.173rem;
+      font-weight: 400;
+      color: $white;
     }
 
     h2 {
-        font-size: 1.5rem;
-        font-weight: 500;
-        letter-spacing: 0.073rem;
-        margin: 1rem 0 1.5rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.073rem;
+      margin: 1rem 0 1.5rem;
+      color: $white;
     }
   }
 
@@ -26,68 +27,100 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 1.5rem;
 
-    input {
+
+    &--input {
+      position: relative;
+      width: 100%;
+      
+      input {
         width: 100%;
         background-color: $white;
         color: $very-dark-blue;
-        padding: 1rem 1.5rem 1rem 1rem;
+        padding: 1rem 2.5rem 1rem 1rem;
         border-radius: 6px;
         font-size: 1rem;
         border: none;
         outline: none;
+
+        & ~ span {
+          color: $white;
+          background: $soft-red;
+          border-radius: 0 0 6px 6px;
+          display: none;
+          width: 100%;
+          padding: 0.5rem;
+        }
+
+        & ~ img {
+          width: 25px;
+          position: absolute;
+          top: 1rem;
+          right: 0.8rem;
+          display: none;
+        }
+
+        &.validate:not(:focus):invalid {
+          border: 2px solid $soft-red;
+
+          & ~ span,
+          & ~ img {
+            display: inline-block;
+          }
+        }
+      }
     }
 
     button {
-        width: 100%;
-        padding: 1rem;
-        color: $white;
-        text-align: center;
-        font-size: 1rem;
-        font-weight: 500;
-        background-color: $soft-red;
-        border: none;
-        border-radius: 6px;
+      width: 100%;
+      padding: 1rem;
+      color: $white;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+      background-color: $soft-red;
+      border: none;
+      border-radius: 6px;
     }
   }
 }
 
-@media screen and (min-width: 768px){
-    .subscribe-container {
-        padding: 4rem 1.2rem 4.8rem;
-      
-        &__header {
-          text-align: center;
-          
-          margin: auto;
-          h3 {
-              font-size: 1.2rem;
-            //   letter-spacing: 0.173rem;
-            //   font-weight: 400;
-          }
-      
-          h2 {
-              font-size: 2.2rem;
-            //   font-weight: 500;
-            //   letter-spacing: 0.073rem;
-              margin: 2rem 0;
-          }
-        }
-      
-        &__form {
-          flex-direction: row;
-          gap: 1rem;
-          input {
-              width: 350px;
-              padding: 1rem 1.5rem 1rem 1rem;
-              font-size: 1.1rem;
-          }
-      
-          button {
-              font-size: 1.1rem;
-          }
+@media screen and (min-width: 768px) {
+  .subscribe-container {
+    padding: 4rem 1.2rem 4.8rem;
+
+    &__header {
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        margin: 2rem 0;
+      }
+    }
+
+    &__form {
+      flex-direction: row;
+      gap: 1rem;
+
+      input {
+        width: 350px;
+        // padding: 1rem 1.5rem 1rem 1rem;
+        font-size: 1.1rem;
+      }
+
+      button {
+        font-size: 1.1rem;
+        border: 1px solid $soft-red;
+
+        &:hover {
+          background-color: $white;
+          color: $soft-red;
         }
       }
-      
+    }
+  }
 }
