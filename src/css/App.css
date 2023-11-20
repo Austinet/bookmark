@@ -186,10 +186,9 @@ p {
       align-items: center;
       gap: 2rem;
       position: absolute;
-      bottom: 0rem;
-      padding-bottom: 3rem;
+      width: 100%;
       left: 0;
-      width: 100%; }
+      bottom: 5rem; }
 
 @media screen and (min-width: 768px) {
   .menu-icon {
