@@ -43,9 +43,9 @@ const FrequentlyAskedQuestions = () => {
   const openAnswer = (id) => {
     const newFaq = faqs.map((faq) => {
       if (faq.id === id) {
-        return { ...faq, active: true };
+        return { ...faq, active: !faq.active };
       } else {
-        return { ...faq, active: false };
+        return faq;
       }
     });
     setFaqs(newFaq);
